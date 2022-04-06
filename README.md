@@ -1,3 +1,7 @@
+# My Version
+This repo is a modified version of zer0m0n. I'm removing everything I don't need while trying to learn about process hooking and native API calls.
+
+
 zer0m0n v0.8
 ============
 
@@ -13,40 +17,6 @@ v0.8
 
 v0.7
 + x64 driver version
-
-v0.6
-+ handle files deletion (through NtDeleteFile, NtCreateFile/NtClose via FILE_DELETE_ON_CLOSE and NtSetInformationFile)
-+ cuckoo 1.1 compatibility
-
-v0.5
-+ bug fixes
-+ win7 support
-+ ZwCreateUserProcess hook 
-+ ZwUserCallNoParam hook
-+ ZwCreateThreadEx hook
-
-v0.4
-+ bug fixes
-+ more anti VM detection features
-+ log new loaded modules through ZwCreateSection() hook
-+ shadow ssdt hook
-+ handle shutdown attempt through ExitWindowsEx() => abort analysis
-
-v0.3
-+ fix minor bugs
-+ fix ZwTerminateProcess race condition (notify analyzer.py of process termination)
-+ fix hook ZwDelayExecution (log the call before executing it)
-+ signatures
-+ some anti VM (virtualbox) detection features (based on pafish PoC)
-+ ZwReadVirtualMemory hook
-+ ZwResumeThread hook
-+ handle driver execution (abort analysis)
-
-
-v0.2
-+ added ZwDeviceIoControlFile, ZwCreateMutant, ZwDelayExecution & ZwTerminateProcess SSDT hooks
-+ fixed deadlock bug (inifinte wait on FltSendMessage)
-+ fixed performance issues (drop => patched using multithreading in logs_dispatcher)
 
 How it works
 ============
